@@ -543,7 +543,7 @@ export var tns = function(options) {
     rect = div.getBoundingClientRect();
     width = rect.right - rect.left;
     div.remove();
-    return width || getClientWidth(el.parentNode);
+    return width || getClientWidth(el.parentNode || doc.body);
   }
 
   function getViewportWidth () {
